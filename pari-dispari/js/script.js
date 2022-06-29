@@ -50,8 +50,9 @@ console.log("Somma dei 2 numeri è: " + sum);
 
 // Creo una funzione per stabilire se un numero è pari o dispari
 function isEven (number) {
+  // Inserisco true (è pari) di Default
   let result = true;
-
+  // Se è vero che da resto, allora diventa false (NON è pari)
   if (number % 2) {result = false;}
 
 
