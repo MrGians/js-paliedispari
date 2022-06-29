@@ -8,18 +8,20 @@ const userWord = prompt("Inserisci una parola!", "ciao");
 console.log("La parola scelta dall'utente è: " + userWord);
 
 // Creo una funziona per ricostruire al contrario la parola inserita dall'utente
-function reverseWord (word) {
-  let result = "";
+function isPalindrome (word) {
+  // Inizializzo la variabile result a Stringa
+  let wordReverse = "";
+  // Creo un ciclo FOR per ricostruire lettera per lettera la parola partendo dalla fine (reverse)
+  for (i = word.length - 1; i >= 0; i--) {wordReverse += word[i];}
+  console.log("La parola scelta al contrario è: " + wordReverse);
 
-  for (i = word.length - 1; i >= 0; i--) {result += word[i];}
+  // Controllo se la parola è Palindroma
+  let palindromeResult = word === wordReverse ? `La parola ${word} è Palindroma!` : `La parola ${word} NON è Palindroma!`;
 
-  return result;
+  // Restituisco il risultato finale
+  return palindromeResult;
 }
 
-// Recupero la parola al contrario generata dalla funzione
-const reverseUserWord = reverseWord(userWord);
-console.log("La parola scelta al contrario è: " + reverseUserWord);
-
-// Controllo se la parola è palindroma
-const isPalindrome = userWord === reverseUserWord ? console.log(`La parola ${userWord} è Palindroma!`) : console.log(`La parola ${userWord} non è Palindroma`);
-console.log
+// Recupero il risultato dalla funzione
+const palindromeCheck = isPalindrome(userWord);
+console.log(palindromeCheck);

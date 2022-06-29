@@ -58,7 +58,7 @@ function isEven (number) {
   return result;
 }
 
-// Recuper il risultato della funzione
+// Recupero il risultato della funzione
 const sumResult = isEven(sum);
 
 // Controllo SE result ha valore "pari" o "dispari"
@@ -68,8 +68,9 @@ if (sumResult) {
 else {
   console.log("Il risultato della somma è 'dispari' !! ")
 }
+
 // Controllo SE la scelta utente coincide con il risultato della somma 
-if (userChoice === "pari" && sumResult || userChoice === "dispari" && !sumResult) {
+if ((userChoice === "pari" && sumResult) || (userChoice === "dispari" && !sumResult)) {
   console.log("Hai Vinto!");
 } else {
   console.log("Hai Perso!");
